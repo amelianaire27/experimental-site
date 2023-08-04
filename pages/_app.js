@@ -30,7 +30,7 @@ function Application({ Component, pageProps }) {
     window.CommandBar.trackEvent("buttonClicked", {})};
     
     return () => {
-      [buttonClicked]
+      [buttonClicked, commandBarReady]
     }
   });
 
