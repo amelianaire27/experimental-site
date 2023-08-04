@@ -4,8 +4,8 @@ import Footer from '@components/Footer'
 import Button from '../components/Button';
 
 export default function Home() {
-  const handleButtonClick = () => {
-    alert('Button clicked!');
+  const buttonClicked = () => {
+    window.CommandBar.trackEvent("buttonClicked", {});
   };
   return (
     <div className="container">
