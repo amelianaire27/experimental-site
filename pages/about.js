@@ -14,7 +14,11 @@ export default function About() {
       <main>
         <Header title="About" />
         <p className="description">
-          Trying to get CommandBar to show on all pages....
+          The story of this app is, that it was created for the sole purpose of testing out the various CommandBar
+          settings.
+        </p>
+        <p className="description">
+          Check out the <a href='https://www.commandbar.com/sdk' target='_blank'>CommandBar docs</a> for more information!
         </p>
       </main>
 
