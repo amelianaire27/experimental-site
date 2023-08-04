@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { AppProps } from "next/app";
 import { init } from "commandbar";
+import Button from "@components/Button";
 
 import '@styles/globals.css'
 
@@ -11,6 +12,7 @@ if (typeof window !== "undefined") {
 
 function Application({ Component, pageProps }) {
   const [commandBarReady, setCommandBarReady] = useState(false);
+  const buttonClicked = Button.apply;
 
   useEffect(() => {
     const loggedInUserId = '12345'; // example

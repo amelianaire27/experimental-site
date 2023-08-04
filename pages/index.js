@@ -4,8 +4,8 @@ import Footer from '@components/Footer'
 import Button from '../components/Button';
 
 export default function Home() {
-  const buttonClicked = () => {
-    window.CommandBar.trackEvent("buttonClicked", {});
+  const handleButtonClick = () => {
+    
   };
   return (
     <div className="container">
@@ -19,7 +19,7 @@ export default function Home() {
         <p className="description">
           This is a Next.js site, it's pretty sweet.
         </p>
-        <Button label="Click Me" onClick={buttonClicked} />
+        <Button label="Click Me" onClick={handleButtonClick} />
       </main>
 
       <Footer />
