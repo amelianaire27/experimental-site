@@ -24,9 +24,14 @@ function Application({ Component, pageProps }) {
   }, []);
 
   useEffect (() => {
+    if (commandBarReady) {
     // Create a buttonClicked event that we can use to trigger a nudge
-    window.CommandBar.trackEvent("buttonClicked", {})
-  })
+    window.CommandBar.trackEvent("buttonClicked", {})};
+    
+    return () => {
+      [buttonClicked]
+    }
+  });
 
   return <Component {...pageProps} />
 }

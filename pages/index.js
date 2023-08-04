@@ -19,7 +19,7 @@ export default function Home() {
         <p className="description">
           This is a Next.js site, it's pretty sweet.
         </p>
-        <Button label="Click Me" onClick={handleButtonClick} />
+        <Button label="Click Me" onClick={buttonClicked} />
       </main>
 
       <Footer />
