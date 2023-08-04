@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-
+import Button from '../components/Button';
 
 export default function Home() {
+  const handleButtonClick = () => {
+    alert('Button clicked!');
+  };
   return (
     <div className="container">
       <Head>
@@ -14,8 +17,9 @@ export default function Home() {
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          This is a Next.js site, it's pretty sweet.
         </p>
+        <Button label="Click Me" onClick={handleButtonClick} />
       </main>
 
       <Footer />
