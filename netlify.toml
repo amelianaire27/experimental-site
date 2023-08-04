@@ -4,3 +4,5 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+  package = "@commandbar/netlify-plugin-commandbar"
+  entryPoint = "/index.html"
