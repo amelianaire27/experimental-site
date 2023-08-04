@@ -13,13 +13,20 @@ function Application({ Component, pageProps }) {
 
   useEffect(() => {
     const loggedInUserId = '12345'; // example
+    
     window.CommandBar.boot(loggedInUserId).then(() => {
       setCommandBarReady(true);
     });
+
     return () => {
       window.CommandBar.shutdown();
     }
   }, []);
+
+  useEffect (() => {
+    // Create a buttonClicked event that we can use to trigger a nudge
+    window.CommandBar.trackEvent("buttonClicked", {})
+  })
 
   return <Component {...pageProps} />
 }
