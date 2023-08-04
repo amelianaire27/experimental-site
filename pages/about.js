@@ -1,19 +1,20 @@
-import { useRouter } from "next/router";
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
 
-function About() {
-  const router = useRouter();
 
+export default function About() {
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>About Me</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Header title="About" />
         <p className="description">
-          This is a site I've created so I can implement some features of CommandBar.
+          Trying to get CommandBar to show on all pages....
         </p>
       </main>
 
@@ -21,5 +22,3 @@ function About() {
     </div>
   )
 }
-
-export default About;
