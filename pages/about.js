@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import { useRouter } from "next/router";
 
+function About() {
+  const router = useRouter();
 
-export default function About() {
   return (
     <div className="container">
       <Head>
@@ -22,3 +21,5 @@ export default function About() {
     </div>
   )
 }
+
+export default About;
