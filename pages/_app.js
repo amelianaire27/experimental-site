@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { AppProps } from "next/app";
 import { init } from "commandbar";
-import Button from "@components/Button";
 
 import '@styles/globals.css'
 
@@ -31,6 +28,17 @@ function Application({ Component, pageProps }) {
       window.CommandBar.trackEvent("buttonClicked", {})};
     }
   });
+
+  useEffect(() =>{
+    const onSearchCats = () => {
+      return fetch(`https://catfact.ninja/fact`)
+      .then(response => response.json())
+    };
+    window.CommandBar.addArgumentChoices('cats', [],{
+    onInputChange: onSearchCats
+  }
+    );
+  })
 
   return <Component {...pageProps} />
 }

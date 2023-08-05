@@ -14,7 +14,7 @@ export default function About() {
       <main>
         <Header title="About" />
         <p className="description">
-          The story of this app is, that it was created for the sole purpose of testing out the various CommandBar
+          The story of this app is that it was created for the sole purpose of testing out the various CommandBar
           settings.
         </p>
         <p className="description">

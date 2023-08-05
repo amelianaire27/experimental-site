@@ -17,7 +17,10 @@ export default function Home() {
       <main>
         <Header title="Welcome to my app!" />
         <p className="description">
-          This is a Next.js site, it's pretty sweet.
+          This is a Next.js site, it's pretty sweet!
+        </p>
+        <p className="description">
+          To navigate between pages, use Cmd+K or Ctrl+K. You can also click the button below, see what happens...
         </p>
         <Button label="Click Me" onClick={handleButtonClick} />
       </main>
