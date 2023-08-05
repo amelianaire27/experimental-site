@@ -7,6 +7,10 @@ export default function Home() {
   const handleButtonClick = () => {
     window.CommandBar.trackEvent("buttonClicked", {});
   };
+  const onSearchCats = () => {
+    return fetch(`https://catfact.ninja/fact`)
+    .then(response => response.json())
+  };
   return (
     <div className="container">
       <Head>

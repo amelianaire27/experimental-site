@@ -30,10 +30,6 @@ function Application({ Component, pageProps }) {
   });
 
   useEffect(() =>{
-    const onSearchCats = () => {
-      return fetch(`https://catfact.ninja/fact`)
-      .then(response => response.json())
-    };
     window.CommandBar.addArgumentChoices('cats', [],{
     onInputChange: onSearchCats
   }
