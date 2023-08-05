@@ -9,6 +9,7 @@ if (typeof window !== "undefined") {
 
 function Application({ Component, pageProps }) {
   const [commandBarReady, setCommandBarReady] = useState(false);
+
   useEffect(() => {
     const loggedInUserId = '12345'; // example
     
