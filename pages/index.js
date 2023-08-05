@@ -5,7 +5,7 @@ import Button from '../components/Button';
 
 export default function Home() {
   const handleButtonClick = () => {
-    Button.apply;
+    window.CommandBar.trackEvent("buttonClicked", {});
   };
   return (
     <div className="container">

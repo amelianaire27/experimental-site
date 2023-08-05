@@ -4,7 +4,7 @@ import { init } from 'commandbar';
 function Button({ label, onClick }) {
     const handleClick = () => {
         if (onClick) {
-            window.CommandBar.trackEvent('buttonClicked', {})
+            onClick();
         }
       };
   return (
