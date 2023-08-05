@@ -28,31 +28,6 @@ function Application({ Component, pageProps }) {
     }
   });
 
-  useEffect(() =>{
-    const onSearchContacts = (query) => {
-      return fetch(`https://catfact.ninja/fact`)
-        .then(response => response.json())
-        .then(data => {
-          // Extract the fact from the API response
-          const catFact = data.fact;
-          // Return the fact as a choice to the CommandBar
-          return [{ key: catFact, text: catFact }];
-        })
-        .catch(error => {
-          console.error('Error fetching cat fact:', error);
-          return []; // Return an empty array as choices if there's an error
-        });
-    };
-    
-    // Register search function to CommandBar
-    window.CommandBar.addArgumentChoices('contacts', [],
-      {
-        onInputChange: onSearchContacts
-      }
-    );
-    
-  })
-
   return <Component {...pageProps} />
 }
 
