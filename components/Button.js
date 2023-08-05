@@ -1,9 +1,10 @@
 import React from 'react';
+import { init } from 'commandbar';
 
 function Button({ label, onClick }) {
     const handleClick = () => {
         if (onClick) {
-          onClick();
+            window.CommandBar.trackEvent('buttonClicked', {})
         }
       };
   return (

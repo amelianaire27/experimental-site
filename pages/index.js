@@ -5,7 +5,7 @@ import Button from '../components/Button';
 
 export default function Home() {
   const handleButtonClick = () => {
-    
+    Button.apply;
   };
   return (
     <div className="container">
